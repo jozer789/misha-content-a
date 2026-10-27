@@ -4,293 +4,202 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>МИША.TATTOO — бью тату, качаю мастеров</title>
-<meta name="description" content="Тату-мастер: сеансы от 4 000 ₽. Мастерам и студиям: ведение соцсетей, reels, заявки.">
+<meta name="description" content="Тату-мастер: сеансы от 4 000 ₽. Мастерам: ведение соцсетей, reels, заявки.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Golos+Text:wght@400;500;700;900&family=Amatic+SC:wght@700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Golos+Text:wght@400;500;700&family=Amatic+SC:wght@700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000000;--card:#0c0c0d;--bone:#f5f1e6;--bone-dim:#a9a294;--blood:#c1121f;--amber:#e8a020;--line:rgba(245,241,230,.16);--d:'Oswald',sans-serif;--t:'Golos Text',system-ui,sans-serif;--h:'Amatic SC',cursive;--m:'JetBrains Mono',monospace}
+:root{--bg:#060606;--bone:#f2eee2;--dim:#8e8878;--blood:#c1121f;--line:rgba(242,238,226,.14);
+--d:'Oswald',sans-serif;--t:'Golos Text',system-ui,sans-serif;--h:'Amatic SC',cursive;--m:'JetBrains Mono',monospace}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--bone);font-family:var(--t);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--blood);color:var(--bone)}
+body{background:var(--bg);color:var(--bone);font-family:var(--t);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--blood);color:#fff}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--blood);outline-offset:3px}
-body::after{content:"";position:fixed;inset:0;z-index:120;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
-.shell{max-width:1200px;margin:0 auto;padding:0 20px}
-@media(min-width:900px){.shell{padding:0 44px}}
-.run{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line);font-family:var(--m);font-size:11px;letter-spacing:.14em;color:var(--bone-dim);padding:10px 0;text-transform:uppercase}
-.mast{border-bottom:3px solid var(--bone);padding:22px 0 0}
-.mast-row{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap}
-.brand{font-family:var(--d);font-weight:700;font-size:clamp(64px,13vw,168px);line-height:.88;text-transform:uppercase}
-.brand .dot{color:var(--blood)}
-.est{font-family:var(--h);font-size:30px;color:var(--amber);transform:rotate(-4deg);white-space:nowrap}
-nav.menu{display:flex;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:16px}
-nav.menu a{font-family:var(--m);font-size:12px;font-weight:700;letter-spacing:.1em;padding:14px 20px 14px 0;margin-right:28px;text-transform:uppercase;color:var(--bone-dim)}
-nav.menu a:last-child{margin-left:auto;margin-right:0;color:var(--bg);background:var(--blood);padding:14px 24px}
-nav.menu a:hover{color:var(--blood)}
-nav.menu a:last-child:hover{color:var(--bg);background:var(--amber)}
-.hero{display:grid;grid-template-columns:1.2fr .9fr 1fr;gap:44px;padding:60px 0 68px;align-items:start}
-@media(max-width:1020px){.hero{grid-template-columns:1fr 1fr}}
-@media(max-width:680px){.hero{grid-template-columns:1fr}}
-.k{display:inline-block;font-family:var(--m);font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--bg);background:var(--bone);padding:6px 12px;margin-bottom:24px;text-transform:uppercase}
-h1{font-family:var(--d);font-weight:700;text-transform:uppercase;line-height:.92;font-size:clamp(52px,6.2vw,94px)}
-h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom}
-h1 .w>span{display:inline-block;transform:translateY(110%);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
-@keyframes rise{to{transform:none}}
-h1 .blood{color:var(--blood)}
-h1 .ghost{color:transparent;-webkit-text-stroke:2px var(--bone)}
-.sub{margin-top:24px;font-size:18px;max-width:46ch}
-.sub b{color:var(--amber)}
-.cta{display:flex;margin-top:30px;flex-wrap:wrap}
-.btn{font-weight:900;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:17px 30px;border:2px solid var(--bone);background:var(--blood);color:#fff;cursor:pointer;font-family:var(--t);transition:none}
-.btn:hover{background:var(--amber);color:#000;border-color:var(--amber)}
-.btn.ghost{background:transparent;color:var(--bone)}
-.btn.ghost:hover{background:var(--bone);color:#000}
-.facts{font-family:var(--m);font-size:11.5px;color:var(--bone-dim);margin-top:20px}
-.hand{font-family:var(--h);font-size:27px;line-height:1.15;color:var(--amber);transform:rotate(-5deg);margin:30px 0 0;max-width:280px}
-.photo{border:2px solid var(--bone);background:var(--card);position:relative;transform:rotate(1.2deg)}
-.photo .ph{aspect-ratio:3/3.7;display:flex;align-items:center;justify-content:center;text-align:center;padding:26px;filter:sepia(.28) contrast(1.06) saturate(.85);background:radial-gradient(circle at 50% 30%,#232326,#0c0c0d 70%)}
-.photo .ph span{font-family:var(--m);font-size:12px;letter-spacing:.12em;color:var(--bone-dim)}
-.photo figcaption{border-top:2px solid var(--bone);padding:9px 14px;font-family:var(--m);font-size:11px;display:flex;justify-content:space-between;color:var(--bone-dim);background:#000}
-.stamp{position:absolute;bottom:-28px;right:-14px;width:112px;height:112px;border:3px solid var(--blood);border-radius:50%;color:var(--blood);display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--d);font-weight:600;font-size:14px;line-height:1.2;transform:rotate(-12deg);background:rgba(0,0,0,.55)}
-.tick{border-top:3px solid var(--bone);border-bottom:3px solid var(--bone);background:var(--blood);color:#fff;overflow:hidden;white-space:nowrap}
-.tick .in{display:inline-block;padding:8px 0;font-family:var(--d);font-weight:600;font-size:15px;letter-spacing:.08em;animation:tick 30s linear infinite;text-transform:uppercase}
-@keyframes tick{to{transform:translateX(-50%)}}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-tag{font-family:var(--m);font-size:11px;letter-spacing:.2em;color:var(--blood);font-weight:700;margin-bottom:12px}
-h2{font-family:var(--d);font-weight:700;text-transform:uppercase;line-height:.94;font-size:clamp(40px,5.2vw,76px);margin-bottom:16px}
-h2 .thin{color:transparent;-webkit-text-stroke:2px var(--bone)}
-.sec-note{font-family:var(--m);font-size:12.5px;color:var(--bone-dim);max-width:60ch;margin-bottom:42px}
-.mani{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:start}
-@media(max-width:860px){.mani{grid-template-columns:1fr}}
-.drop::first-letter{font-family:var(--d);font-size:4.4em;float:left;line-height:.84;padding:6px 12px 0 0;color:var(--blood)}
-.drop{font-size:18px;max-width:56ch}
-.drop + .drop{margin-top:18px}
-.pull{border-left:6px solid var(--blood);padding:8px 0 8px 28px;font-family:var(--d);font-weight:500;font-size:clamp(23px,2.4vw,32px);line-height:1.12;text-transform:uppercase}
-.pull cite{display:block;font-family:var(--m);font-style:normal;font-size:12px;color:var(--bone-dim);margin-top:14px}
-.tickets{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--bone)}
-@media(max-width:860px){.tickets{grid-template-columns:1fr}}
-.ticket{padding:40px 36px}
-.ticket:first-child{border-right:2px solid var(--bone)}
-@media(max-width:860px){.ticket:first-child{border-right:0;border-bottom:2px solid var(--bone)}}
-.ticket.hot{background:var(--blood);color:#fff}
-.ticket .t-no{font-family:var(--m);font-size:11px;letter-spacing:.18em;margin-bottom:16px;display:flex;justify-content:space-between}
-.ticket h3{font-family:var(--d);font-weight:700;font-size:clamp(32px,3.2vw,46px);line-height:.96;text-transform:uppercase;margin-bottom:14px}
-.ticket p{font-size:15.5px;margin-bottom:20px;max-width:44ch}
-.ticket ul{list-style:none;margin-bottom:28px;font-size:14.5px}
-.ticket li{padding:10px 0 10px 30px;border-top:1px solid currentColor;position:relative}
-.ticket li::before{content:"";position:absolute;left:2px;top:16px;width:12px;height:12px;background:currentColor;clip-path:polygon(0 0,100% 50%,0 100%)}
-.ticket .btn{border-color:currentColor}
-.strip-wrap{border-top:2px solid var(--bone);border-bottom:2px solid var(--bone);background:#0a0a0a;padding:30px 0 26px}
-.sprockets{height:18px;margin:0 0 20px;background-image:radial-gradient(circle,var(--bone) 4px,transparent 5px);background-size:30px 18px;background-position:center;opacity:.6}
-.sprockets.bot{margin:20px 0 0}
-.frames{display:flex;gap:22px;overflow-x:auto;padding:4px 20px 10px}
-.frame{flex:0 0 270px;border:2px solid var(--bone);background:#111}
-.frame:hover{border-color:var(--amber);transform:translateY(-6px)}
-.frame .img{aspect-ratio:1/1;display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;padding:20px;filter:sepia(.3) contrast(1.05);font-family:var(--m);font-size:12px;color:var(--bone-dim);text-align:center;background:radial-gradient(circle at 50% 35%,#1d1d20,#0a0a0a 75%)}
-.frame .img b{font-family:var(--d);font-size:44px;color:var(--bone);font-weight:600}
-.frame .fn{border-top:2px solid var(--bone);padding:8px 12px;font-family:var(--m);font-size:11px;display:flex;justify-content:space-between;background:#000}
-.frame .fn i{font-style:normal;color:var(--blood);font-weight:700}
-.ledger{border:2px solid var(--bone)}
-.lrow{display:grid;grid-template-columns:64px 1fr auto;gap:6px 20px;padding:26px 30px;border-bottom:1px solid var(--line);align-items:baseline}
-.lrow:last-child{border-bottom:0}
-@media(max-width:640px){.lrow{grid-template-columns:1fr auto}.lrow .ln{grid-column:1/-1}}
-.ln{font-family:var(--d);font-size:30px;color:var(--blood);font-weight:600}
-.lrow h4{font-family:var(--d);font-weight:600;font-size:26px;text-transform:uppercase}
-.lrow .dd{font-size:14px;color:var(--bone-dim);grid-column:2}
-@media(max-width:640px){.lrow .dd{grid-column:1}}
-.lrow .pp{font-family:var(--d);font-weight:700;font-size:30px;white-space:nowrap;text-align:right}
-.lrow .pp small{font-family:var(--m);font-size:11px;color:var(--bone-dim)}
-.lrow .go{grid-column:2;font-family:var(--m);font-size:12px;font-weight:700}
-.lrow .go a{border-bottom:2px solid var(--blood)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--bone)}
-@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.steps{grid-template-columns:1fr}}
-.step{padding:30px 26px;border-right:1px solid var(--line)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+/* micro bar */
+.top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:16px 0;font-family:var(--m);font-size:11px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase}
+.top b{color:var(--blood);font-weight:400}
+/* hero */
+.hero{padding:8vh 0 10vh;display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:end}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:40px}}
+.hero h1{font-family:var(--d);font-weight:700;text-transform:uppercase;line-height:.88;font-size:clamp(80px,14vw,200px);letter-spacing:.002em}
+.hero h1 span{display:block}
+.hero h1 .out{color:transparent;-webkit-text-stroke:2px var(--bone)}
+.hero h1 .red{color:var(--blood)}
+.lede{margin-top:28px;font-size:19px;max-width:44ch;color:var(--bone)}
+.lede small{display:block;margin-top:10px;font-family:var(--m);font-size:12px;color:var(--dim);letter-spacing:.04em}
+.cta{margin-top:34px;display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.btn{font-family:var(--d);font-weight:600;font-size:19px;letter-spacing:.06em;text-transform:uppercase;background:var(--blood);color:#fff;border:0;padding:18px 44px;cursor:pointer}
+.btn:hover{background:var(--bone);color:#000}
+.link{font-family:var(--m);font-size:13px;color:var(--bone);border-bottom:1px solid var(--blood);padding-bottom:3px}
+.link:hover{color:var(--blood)}
+.portrait{border:1px solid var(--line);position:relative}
+.portrait .ph{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;background:radial-gradient(circle at 50% 30%,#17171a,#060606 75%)}
+.portrait .ph span{font-family:var(--m);font-size:11px;letter-spacing:.14em;color:var(--dim)}
+.portrait figcaption{border-top:1px solid var(--line);padding:10px 14px;font-family:var(--m);font-size:11px;color:var(--dim);display:flex;justify-content:space-between}
+.note{font-family:var(--h);font-size:28px;color:var(--bone);opacity:.85;transform:rotate(-4deg);margin-top:22px}
+/* sections: air, one rule */
+section{padding:11vh 0;border-top:1px solid var(--line)}
+.kicker{font-family:var(--m);font-size:11px;letter-spacing:.22em;color:var(--blood);margin-bottom:18px}
+h2{font-family:var(--d);font-weight:600;text-transform:uppercase;line-height:.94;font-size:clamp(44px,6vw,84px);margin-bottom:14px}
+.sub{color:var(--dim);max-width:56ch;margin-bottom:54px;font-size:16px}
+/* flash sheet */
+.flash{border:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.flash{grid-template-columns:repeat(2,1fr)}}
+.cell{aspect-ratio:1/1.12;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;position:relative;transition:background .2s}
+.cell:nth-child(4n){border-right:0}
+.cell:nth-last-child(-n+4){border-bottom:0}
+@media(max-width:900px){.cell:nth-child(4n){border-right:1px solid var(--line)}.cell:nth-child(2n){border-right:0}.cell:nth-last-child(-n+4){border-bottom:1px solid var(--line)}.cell:nth-last-child(-n+2){border-bottom:0}}
+.cell:hover{background:#0e0e10}
+.cell .n{font-family:var(--m);font-size:11px;color:var(--blood);padding:14px 16px 0}
+.cell .sk{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 18px;font-size:13.5px;color:var(--dim)}
+.cell .fn{padding:0 16px 14px;font-family:var(--m);font-size:11px;color:var(--bone)}
+/* services: two quiet rows */
+.svc{display:grid;grid-template-columns:120px 1fr auto;gap:8px 32px;padding:44px 0;border-top:1px solid var(--line);align-items:baseline}
+.svc:last-of-type{border-bottom:1px solid var(--line)}
+@media(max-width:700px){.svc{grid-template-columns:1fr auto}.svc .no{grid-column:1/-1}}
+.no{font-family:var(--m);font-size:12px;color:var(--blood)}
+.svc h3{font-family:var(--d);font-weight:600;font-size:clamp(30px,3.6vw,46px);text-transform:uppercase;line-height:1}
+.svc p{color:var(--dim);font-size:15px;max-width:52ch;margin-top:10px;grid-column:2}
+@media(max-width:700px){.svc p{grid-column:1}}
+.price{font-family:var(--d);font-weight:600;font-size:26px;white-space:nowrap;text-align:right}
+.price small{display:block;font-family:var(--m);font-weight:400;font-size:11px;color:var(--dim);margin-top:4px}
+/* process: single line */
+.steps{display:flex;gap:0;border:1px solid var(--line)}
+@media(max-width:760px){.steps{flex-direction:column}}
+.step{flex:1;padding:28px 26px;border-right:1px solid var(--line)}
 .step:last-child{border-right:0}
-.step .n{font-family:var(--d);font-size:58px;font-weight:700;color:transparent;-webkit-text-stroke:2px var(--amber);line-height:1}
-.step h5{font-family:var(--m);font-size:12px;letter-spacing:.14em;margin:14px 0 8px}
-.step p{font-size:14px;color:var(--bone-dim)}
-.coupon{margin-top:36px;border:2px dashed var(--amber);padding:42px 38px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:rgba(232,160,32,.04)}
-@media(max-width:720px){.coupon{grid-template-columns:1fr}}
-.coupon h3{font-family:var(--d);font-weight:700;font-size:clamp(28px,3.4vw,42px);text-transform:uppercase;line-height:.96}
-.coupon h3 span{color:var(--amber)}
-.coupon p{font-family:var(--m);font-size:12.5px;color:var(--bone-dim);margin-top:12px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
-@media(max-width:900px){.two{grid-template-columns:1fr}}
-details{border:2px solid var(--bone);margin-bottom:12px;background:var(--card)}
-details[open]{border-color:var(--blood)}
-summary{cursor:pointer;font-family:var(--d);font-weight:600;font-size:19px;padding:18px 22px;list-style:none;text-transform:uppercase}
+@media(max-width:760px){.step{border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}}
+.step .d{font-family:var(--m);font-size:11px;color:var(--blood);letter-spacing:.14em;margin-bottom:12px}
+.step p{font-size:14.5px;color:var(--bone)}
+.step p span{color:var(--dim)}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.big-link{font-family:var(--d);font-weight:700;font-size:clamp(40px,5vw,68px);text-transform:uppercase;line-height:1;display:block;margin-bottom:8px}
+.big-link:hover{color:var(--blood)}
+form label{display:block;font-family:var(--m);font-size:11px;letter-spacing:.14em;color:var(--dim);margin:22px 0 8px;text-transform:uppercase}
+input,select,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);padding:12px 2px;font-size:17px;font-family:var(--t);color:var(--bone);border-radius:0}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--blood)}
+select option{color:#000}
+#done{display:none;margin-top:18px;font-family:var(--m);font-size:13px;color:var(--bone)}
+details{border-top:1px solid var(--line);padding:20px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-size:17px;font-weight:700;list-style:none}
 summary::-webkit-details-marker{display:none}
-summary .pm{color:var(--blood);display:inline-block;width:30px}
-details p{padding:0 22px 22px;font-size:14.5px;color:var(--bone-dim)}
-form{background:var(--bone);color:#000;padding:36px 34px}
-form h3{font-family:var(--d);font-weight:700;font-size:34px;text-transform:uppercase}
-form .fs{font-family:var(--m);font-size:11.5px;margin-bottom:6px}
-label{display:block;font-family:var(--m);font-size:11px;font-weight:700;letter-spacing:.12em;margin:16px 0 6px;text-transform:uppercase}
-input,select,textarea{width:100%;background:#fff;border:2px solid #000;padding:13px;font-size:15px;font-family:var(--t);color:#000;border-radius:0}
-input:focus,select:focus,textarea:focus{outline:3px solid var(--blood);outline-offset:0}
-form .btn{width:100%;margin-top:20px;border-color:#000}
-#done{display:none;border:2px solid #000;background:#e7f6d5;padding:14px;margin-top:14px;font-size:14px;color:#000}
-footer{background:var(--blood);color:#fff;padding:30px 0}
-footer .shell{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--m);font-size:12px;font-weight:700}
-footer a{text-decoration:underline;text-underline-offset:3px}
-.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+summary span{color:var(--blood);font-family:var(--m);font-weight:400;margin-right:14px}
+details p{color:var(--dim);font-size:15px;margin-top:10px;max-width:56ch}
+footer{padding:34px 0 44px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--m);font-size:11px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .rv.on{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){h1 .w>span{animation:none;transform:none}.tick .in{animation:none}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
-<div class="shell run"><span>ЗИН МИШИ · ТАТУ / КЛИЕНТЫ</span><span id="dateline">ВЫПУСК №002</span><span>ТИРАЖ: ВЕСЬ ГОРОД · 2026</span></div>
+<div class="wrap">
+<div class="top"><span>Миша<b>.</b>Tattoo — Москва</span><span>Тату / Ведение мастеров</span><span>Запись: ноябрь</span></div>
 
-<header class="mast"><div class="shell">
-<div class="mast-row"><div class="brand">МИША<span class="dot">.</span>TATTOO</div><div class="est">бью — не мажу!</div></div>
-<nav class="menu"><a href="#mani">Манифест</a><a href="#works">Контакт-лист</a><a href="#smm">Ведение</a><a href="#price">Цены</a><a href="#faq">Вопросы</a><a href="#contact">Записаться →</a></nav>
-</div></header>
-
-<div class="shell"><div class="hero">
+<header class="hero">
 <div>
-<span class="k">СВЕЖИЙ НОМЕР · ЧИТАЙ ГРОМКО</span>
-<h1 id="kinetic">БЬЮ ТАТУ. КАЧАЮ МАСТЕРОВ.</h1>
-<p class="sub">Я тату-мастер. Ко мне — <b>за татуировкой</b>. К мастерам и студиям — за <b>ведением соцсетей, reels и заявками</b> из Instagram, VK и Telegram. Один человек вместо агентства.</p>
+<h1><span>Миша</span><span class="out">Tattoo</span><span class="red">Зин №2</span></h1>
+<p class="lede">Бью тату. Веду соцсети тату-мастеров, после которых горит директ.
+<small>Один человек вместо агентства · по предоплате · ответ в течение дня</small></p>
 <div class="cta">
-<button class="btn" onclick="go('tattoo')">Хочу тату →</button>
-<button class="btn ghost" onclick="go('smm')">Я мастер, нужны клиенты</button>
+<button class="btn" onclick="go('tattoo')">Хочу тату</button>
+<a class="link" href="#contact" onclick="preset('smm')">я мастер, нужны клиенты →</a>
 </div>
-<p class="facts">■ ПРЕДОПЛАТА 50% ■ ЭСКИЗ ДО СЕАНСА ■ ДОГОВОР + ЧЕК ■ ОТВЕТ В ТЕЧЕНИЕ ДНЯ</p>
-<p class="hand">это тебе не салон с администратором</p>
 </div>
 <div>
-<figure class="photo" style="margin:0">
-<div class="ph"><span>ТВОЁ ФОТО ЗА РАБОТОЙ<br><br>ВЕРТИКАЛЬ · КОНТРАСТ<br>БЕЗ ФИЛЬТРОВ</span></div>
-<figcaption><span>КАДР 00 · ПЛЁНКА 35ММ</span><span>SEPIA 30%</span></figcaption>
-<div class="stamp">СЕАНС<br>ОТ 4000 ₽</div>
+<figure class="portrait" style="margin:0">
+<div class="ph"><span>ФОТО МАСТЕРА<br>ВЕРТИКАЛЬ</span></div>
+<figcaption><span>35MM</span><span>БЕЗ ФИЛЬТРОВ</span></figcaption>
 </figure>
+<p class="note">← сюда твоё фото за работой</p>
 </div>
-<div>
-<p style="font-family:var(--m);font-size:11px;letter-spacing:.2em;color:var(--blood);font-weight:700">/// КОЛОНКА РЕДАКТОРА</p>
-<p style="font-size:15px;color:var(--bone-dim);margin-top:12px">Агентству ты — строчка в CRM. Мне — человек, которому в пятницу нужен директ с предоплатами. Веду максимум двух мастеров сразу и бью сам, а не «курирую процесс».</p>
+</header>
 </div>
-</div></div>
 
-<div class="tick"><span class="in">BLACKWORK · FINELINE · LETTERING · MINIMAL · COVER-UP · REELS ДЛЯ МАСТЕРОВ · BLACKWORK · FINELINE · LETTERING · MINIMAL · COVER-UP · REELS ДЛЯ МАСТЕРОВ ·&nbsp;</span></div>
-
-<div class="shell"><section class="rv" id="mani">
-<p style="font-family:var(--m);font-size:11px;letter-spacing:.2em;color:var(--blood);font-weight:700">01 /// МАНИФЕСТ</p>
-<h2>ПОЧЕМУ ЭТО <span class="thin">РАБОТАЕТ</span></h2>
-<div class="mani" style="margin-top:34px">
-<div>
-<p class="drop">Тату-рынок забит одинаковыми аккаунтами: белый фон, сто «свободных окошек», ноль лица. Клиент выбирает не иглу — он выбирает человека, которому доверит кожу. Поэтому мой аккаунт и аккаунты моих мастеров — это процесс, руки, зажившие работы и живые ответы.</p>
-<p class="drop">Второй факт: мастерам не нужно агентство за 150 тысяч. Им нужен человек из цеха, который сам бьёт и знает, какой кадр соберёт запись. Ты снимаешь двадцать минут в неделю на телефон — я превращаю это в месяц контента.</p>
-</div>
-<div>
-<blockquote class="pull">«После упаковки профиля запись выросла с 3 до 11 человек в месяц»<cite>— МАСТЕР, КОТОРОГО ВЕДУ (ИМЯ ПОДСТАВИШЬ)</cite></blockquote>
-</div>
+<div class="wrap"><section class="rv" id="works" style="border-top:0;padding-top:0">
+<p class="kicker">Флеш-сет · свежие работы</p>
+<h2>Выбирай<br>с листа</h2>
+<p class="sub">Так выглядят листы флешей в студиях. Замени ячейки своими фото — клиент тыкнет в понравившееся и придёт именно за ним.</p>
+<div class="flash">
+<div class="cell"><span class="n">№01</span><span class="sk">fineline · 2 часа</span><span class="fn">свежая</span></div>
+<div class="cell"><span class="n">№02</span><span class="sk">blackwork · 1 сеанс</span><span class="fn">зажившая</span></div>
+<div class="cell"><span class="n">№03</span><span class="sk">процесс · вертикаль</span><span class="fn">reels-кадр</span></div>
+<div class="cell"><span class="n">№04</span><span class="sk">леттеринг · предплечье</span><span class="fn">надпись</span></div>
+<div class="cell"><span class="n">№05</span><span class="sk">minimal · 40 минут</span><span class="fn">миниатюра</span></div>
+<div class="cell"><span class="n">№06</span><span class="sk">cover-up</span><span class="fn">перекрытие</span></div>
+<div class="cell"><span class="n">№07</span><span class="sk">эскиз на заказ</span><span class="fn">индивидуально</span></div>
+<div class="cell"><span class="n">№08</span><span class="sk">отзыв · скрин</span><span class="fn">зажившие</span></div>
 </div>
 </section>
 
-<section class="rv" id="tracks">
-<p style="font-family:var(--m);font-size:11px;letter-spacing:.2em;color:var(--blood);font-weight:700">02 /// ДВА ТАЛОНА</p>
-<h2>ОТОРВИ <span class="thin">СВОЙ</span></h2>
-<div class="tickets" style="margin-top:34px">
-<div class="ticket hot">
-<div class="t-no"><span>ТАЛОН A · КЛИЕНТАМ</span><span>№ 004000</span></div>
-<h3>Тату у меня</h3>
-<p>Минимум, надписи, графика. Эскиз под тебя, стерильно, с заботой о заживлении.</p>
-<ul><li>Консультация + эскиз — 0 ₽</li><li>Сеанс от 4 000 ₽</li><li>Коррекция включена</li></ul>
-<button class="btn ghost" onclick="go('tattoo')">Записаться на сеанс</button>
-</div>
-<div class="ticket">
-<div class="t-no"><span>ТАЛОН B · МАСТЕРАМ</span><span>№ 025000</span></div>
-<h3>Ведение мастеров</h3>
-<p>Аккаунт, после которого горит директ: процесс, зажившие, отзывы, reels, запись без твоего участия.</p>
-<ul><li>Упаковка профиля + актуальное</li><li>12–20 постов и 8 reels в месяц</li><li>Скрипты записи в директе</li></ul>
-<button class="btn" onclick="go('smm')">Обсудить ведение</button>
-</div>
-</div>
-</section></div>
-
-<section class="rv" id="works" style="padding-left:0;padding-right:0">
-<div class="shell"><p style="font-family:var(--m);font-size:11px;letter-spacing:.2em;color:var(--blood);font-weight:700">03 /// КОНТАКТ-ЛИСТ</p>
-<h2>РАБОТЫ <span class="thin">С ПОЛЕЙ</span></h2>
-<p style="font-family:var(--m);font-size:12.5px;color:var(--bone-dim);max-width:60ch;margin-bottom:42px">ЛИСТАЙ ВБОК. ЗАМЕНИ КАДРЫ СВОИМИ ФОТО 1080×1080.</p></div>
-<div class="strip-wrap">
-<div class="sprockets"></div>
-<div class="frames">
-<div class="frame"><div class="img"><b>01A</b>свежая · fineline · 2 часа</div><div class="fn"><span>КАДР 01A</span><i>● СВЕЖАЯ</i></div></div>
-<div class="frame"><div class="img"><b>02A</b>зажившая · blackwork · 1 сеанс</div><div class="fn"><span>КАДР 02A</span><i>● ЗАЖИВШАЯ</i></div></div>
-<div class="frame"><div class="img"><b>03A</b>процесс · вертикаль для reels</div><div class="fn"><span>КАДР 03A</span><i>● ПРОЦЕСС</i></div></div>
-<div class="frame"><div class="img"><b>04A</b>леттеринг · предплечье</div><div class="fn"><span>КАДР 04A</span><i>● НАДПИСЬ</i></div></div>
-<div class="frame"><div class="img"><b>05A</b>миниатюра · minimal · 40 мин</div><div class="fn"><span>КАДР 05A</span><i>● МИНИМУМ</i></div></div>
-<div class="frame"><div class="img"><b>06A</b>отзыв · скрин переписки</div><div class="fn"><span>КАДР 06A</span><i>● ОТЗЫВ</i></div></div>
-</div>
-<div class="sprockets bot"></div>
-</div>
+<section class="rv" id="services">
+<p class="kicker">Две услуги · без пакетов-матрешек</p>
+<h2>Что делаю</h2>
+<p class="sub">Всё остальное — внутри этих двух строк. Детали обсудим в переписке, а не на лендинге.</p>
+<div class="svc"><span class="no">/01</span><div><h3>Тату</h3><p>Минимум, надписи, графика. Эскиз бесплатно, стерильно, коррекция включена.</p></div><div class="price">от 4 000 ₽<small>сеанс</small></div></div>
+<div class="svc"><span class="no">/02</span><div><h3>Ведение мастеров</h3><p>Упаковка профиля, 12–20 постов и 8 reels в месяц, директ по скрипту до предоплаты.</p></div><div class="price">от 25 000 ₽<small>/мес · разбор 3 000 ₽</small></div></div>
 </section>
 
-<div class="shell"><section class="rv" id="smm">
-<p style="font-family:var(--m);font-size:11px;letter-spacing:.2em;color:var(--blood);font-weight:700">04 /// ГРОССБУХ</p>
-<h2>ВЕДЕНИЕ <span class="thin">БЕЗ ВОДЫ</span></h2>
-<div class="ledger" style="margin-top:34px">
-<div class="lrow"><div class="ln">01</div><div><h4>Упаковка профиля</h4><p class="dd">Шапка, аватар, актуальное «прайс / работы / отзывы / запись». Аудит + гайд по фото работ.</p><p class="go"><a href="#contact" onclick="preset('smm')">→ заказать упаковку</a></p></div><div class="pp">от 8 000 ₽</div></div>
-<div class="lrow"><div class="ln">02</div><div><h4>Контент-поток с ИИ</h4><p class="dd">30 постов + 10 сценариев reels за 5 дней. Ты снимаешь 20 минут в неделю — я пакую.</p><p class="go"><a href="#contact" onclick="preset('smm')">→ заказать поток</a></p></div><div class="pp">от 9 000 ₽</div></div>
-<div class="lrow"><div class="ln">03</div><div><h4>Ведение под ключ</h4><p class="dd">Постинг каждый день, stories, директ по скрипту до предоплаты, отчёт каждую пятницу.</p><p class="go"><a href="#contact" onclick="preset('smm')">→ забрать под ключ</a></p></div><div class="pp">от 25 000 ₽</div></div>
-<div class="lrow"><div class="ln">04</div><div><h4>Разбор 60 минут</h4><p class="dd">Zoom: что чинить в профиле, план из 10 шагов + запись. Неделя вопросов в чате.</p><p class="go"><a href="#contact" onclick="preset('smm')">→ записаться на разбор</a></p></div><div class="pp">3 000 ₽</div></div>
-</div>
-</section>
-
-<section class="rv" id="price">
-<p style="font-family:var(--m);font-size:11px;letter-spacing:.2em;color:var(--blood);font-weight:700">05 /// ХРОНИКА</p>
-<h2>КАК ПОЙДЁТ <span class="thin">РАБОТА</span></h2>
-<div class="steps" style="margin-top:34px">
-<div class="step"><div class="n">0–1</div><h5>ЗАЯВКА</h5><p>Идея тату или ссылка на аккаунт. Отвечаю в течение дня.</p></div>
-<div class="step"><div class="n">2–3</div><h5>ЭСКИЗ / АУДИТ</h5><p>Тату: эскиз + цена. Ведение: разбор профиля + план.</p></div>
-<div class="step"><div class="n">04</div><h5>ПРЕДОПЛАТА 50%</h5><p>Фиксирует дату. Чек самозанятого, договор.</p></div>
-<div class="step"><div class="n">∞</div><h5>СЕАНС / ПОТОК</h5><p>Бьём + заживляем. Или постим и гоним заявки.</p></div>
-</div>
-<div class="coupon">
-<div><h3>Купон: разбор <span>0 ₽</span></h3><p>✂ ПЕРВЫЙ РАЗБОР АККАУНТА — БЕСПЛАТНО. СЛОВО «ГАЗЕТА» В ЗАЯВКЕ.</p></div>
-<button class="btn ghost" onclick="go('consult')">Забрать купон</button>
+<section class="rv" id="process">
+<p class="kicker">Как пойдёт работа</p>
+<h2>Четыре шага</h2>
+<p class="sub">Одинаково для сеанса и ведения.</p>
+<div class="steps">
+<div class="step"><div class="d">ДЕНЬ 0–1</div><p>Заявка <span>— идея тату или ссылка на аккаунт</span></p></div>
+<div class="step"><div class="d">ДЕНЬ 2–3</div><p>Эскиз / аудит <span>— цена и план</span></p></div>
+<div class="step"><div class="d">ДЕНЬ 4</div><p>Предоплата 50% <span>— чек, договор</span></p></div>
+<div class="step"><div class="d">ДАЛЬШЕ</div><p>Сеанс / поток <span>— бьём или постим</span></p></div>
 </div>
 </section>
 
 <section class="rv" id="faq">
-<p style="font-family:var(--m);font-size:11px;letter-spacing:.2em;color:var(--blood);font-weight:700">06 /// ПОЧТА РЕДАКЦИИ</p>
-<h2>ВОПРОСЫ <span class="thin">ЧИТАТЕЛЕЙ</span></h2>
-<div class="two" style="margin-top:34px">
-<div>
-<details open><summary><span class="pm">[+]</span>Это безопасно? (тату)</summary><p>Да: одноразовые иглы вскрываются при тебе, стерильность, заживляющая плёнка, памятка по уходу.</p></details>
-<details><summary><span class="pm">[+]</span>Сколько стоит тату?</summary><p>Минимум от 4 000 ₽. Точную цену называю после эскиза. Консультация и эскиз бесплатны.</p></details>
-<details><summary><span class="pm">[+]</span>У меня 200 подписчиков — поможет?</summary><p>Да, если это живые люди из твоего города. Упаковка + reels + быстрые ответы дают запись уже с маленькой базы.</p></details>
-<details><summary><span class="pm">[+]</span>Кто снимает reels?</summary><p>Ты — 20 минут в неделю на телефон. Я — сценарии, монтаж, постинг.</p></details>
+<p class="kicker">Коротко</p>
+<h2>Вопросы</h2>
+<p class="sub">Остальное — в переписке.</p>
+<div style="max-width:720px">
+<details open><summary><span>—</span>Это безопасно?</summary><p>Одноразовые иглы при тебе, стерильность, заживляющая плёнка, памятка по уходу.</p></details>
+<details><summary><span>—</span>Сколько стоит тату?</summary><p>Минимум от 4 000 ₽. Точно — после эскиза. Консультация бесплатна.</p></details>
+<details><summary><span>—</span>У меня 200 подписчиков, ведение поможет?</summary><p>Да, если это живые люди из твоего города. Упаковка + reels + быстрые ответы дают запись с маленькой базы.</p></details>
 </div>
-<div id="contact">
+</section>
+
+<section class="rv" id="contact" style="border-bottom:0">
+<p class="kicker">Связь</p>
+<div class="contact-grid">
+<div>
+<a class="big-link" href="#contact" onclick="preset('tattoo')">Хочу тату →</a>
+<a class="big-link" href="#contact" onclick="preset('smm')" style="color:transparent;-webkit-text-stroke:1.5px var(--bone)">Я мастер →</a>
+<p class="sub" style="margin:22px 0 0">или оставь заявку — отвечу в течение дня.</p>
+</div>
+<div>
 <form id="lead" onsubmit="return false">
-<h3>Заявка</h3>
-<p class="fs">ОТВЕЧУ В ТЕЧЕНИЕ ДНЯ · НИ К ЧЕМУ НЕ ОБЯЗЫВАЕТ</p>
 <label>Мне нужно</label>
-<select id="f-need"><option value="tattoo">Хочу тату — эскиз + запись</option><option value="smm">Я мастер — нужны клиенты</option><option value="content">Пакет контента / reels</option><option value="consult">Разбор по купону — 0 ₽</option></select>
+<select id="f-need"><option value="tattoo">Хочу тату — эскиз + запись</option><option value="smm">Я мастер — нужны клиенты</option><option value="consult">Разбор аккаунта — 3 000 ₽</option></select>
 <label>Имя</label><input id="f-name" placeholder="Как обращаться">
 <label>Telegram / WhatsApp</label><input id="f-contact" placeholder="@nick или +7...">
-<label>Идея или ссылка</label><textarea id="f-msg" rows="3" placeholder="Тату: идея + место + размер. Ведение: ссылка на аккаунт"></textarea>
-<button class="btn" onclick="sendLead()">Отправить →</button>
-<div id="done">Готово. Скопируй и отправь себе в Telegram:<br><br><code id="copy" style="font-family:var(--m);font-size:12px"></code></div>
+<label>Идея или ссылка</label><textarea id="f-msg" rows="2" placeholder="Пара слов"></textarea>
+<button class="btn" style="margin-top:28px" onclick="sendLead()">Отправить</button>
+<div id="done">Готово. Скопируй и отправь себе в Telegram:<br><code id="copy"></code></div>
 </form>
 </div>
 </div>
-</section></div>
+</section>
 
-<footer><div class="shell"><span>МИША.TATTOO — ТАТУ · ВЕДЕНИЕ МАСТЕРОВ · 2026</span><span>НАБРАНО ВРУЧНУЮ · <a href="#contact">СВЯЗАТЬСЯ</a></span></div></footer>
+<footer><span>Миша.Tattoo · 2026</span><span><a href="#contact" style="border-bottom:1px solid var(--blood)">Связаться</a></span></footer>
+</div>
 
 <script>
-(function(){var h=document.getElementById('kinetic'),txt=h.textContent.trim().split(/\s+/);h.innerHTML='';txt.forEach(function(w,n){var o=document.createElement('span');o.className='w';var s=document.createElement('span');s.textContent=w;s.style.animationDelay=(n*0.09)+'s';if(n===1||n===2)s.classList.add('blood');if(n===3)s.classList.add('ghost');o.appendChild(s);h.appendChild(o);h.appendChild(document.createTextNode(' '))})})();
-document.getElementById('dateline').textContent='ВЫПУСК №002 · '+new Date().toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric'}).toUpperCase();
+document.getElementById('dateline');
 function preset(v){var s=document.getElementById('f-need');if(s)s.value=v}
 function go(v){preset(v);document.getElementById('contact').scrollIntoView({behavior:'smooth'})}
 function sendLead(){var n=document.getElementById('f-name').value.trim(),c=document.getElementById('f-contact').value.trim(),nd=document.getElementById('f-need').value,m=document.getElementById('f-msg').value.trim();if(!n||!c){alert('Заполни имя и контакт.');return false}document.getElementById('copy').textContent='Заявка: '+n+' | '+c+' | '+nd+' | '+(m||'без коммента');document.getElementById('done').style.display='block';try{localStorage.setItem('tattoo-lead',JSON.stringify({n:n,c:c,nd:nd,m:m,at:new Date().toISOString()}))}catch(e){}return false}
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.1});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.08});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 </script>
 </body>
